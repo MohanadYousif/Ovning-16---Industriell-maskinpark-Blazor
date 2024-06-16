@@ -1,0 +1,74 @@
+﻿@page "/Machines"
+@using MachinePark.Models
+@using MachinePark.Services
+@inject MachineService MachineService
+
+<h3>Machines</h3>
+
+<button @onclick="AddNewMachine">Add New Machine</button>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Latest Data</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var machine in machines)
+        {
+            <tr>
+                <td>@machine.Name</td>
+                <td>@(machine.IsOnline ? "Online" : "Offline")</td>
+                <td>@machine.LatestData</td>
+                <td>
+                    <button @onclick="() => StartMachine(machine.Id)">Start</button>
+                    <button @onclick="() => StopMachine(machine.Id)">Stop</button>
+                    <button @onclick="() => RemoveMachine(machine.Id)">Remove</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private List<Machine> machines;
+
+    protected override void OnInitialized()
+    {
+        machines = MachineService.GetMachines();
+    }
+
+    private void AddNewMachine()
+    {
+        var newMachine = new Machine
+            {
+                Id = Guid.NewGuid(),
+                Name = $"Machine {machines.Count + 1}",
+                IsOnline = false,
+                LatestData = "New Data"
+            };
+        MachineService.AddMachine(newMachine);
+        machines = MachineService.GetMachines();
+    }
+
+    private void StartMachine(Guid id)
+    {
+        MachineService.StartMachine(id);
+        machines = MachineService.GetMachines();
+    }
+
+    private void StopMachine(Guid id)
+    {
+        MachineService.StopMachine(id);
+        machines = MachineService.GetMachines();
+    }
+
+    private void RemoveMachine(Guid id)
+    {
+        MachineService.RemoveMachine(id);
+        machines = MachineService.GetMachines();
+    }
+}

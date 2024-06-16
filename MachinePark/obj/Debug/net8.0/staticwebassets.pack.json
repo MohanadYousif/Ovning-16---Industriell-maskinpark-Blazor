@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\Övning 16 - Industriell maskinpark Blazor\\MachinePark\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MachinePark.bundle.scp.css",
+      "PackagePath": "staticwebassets\\MachinePark.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\Övning 16 - Industriell maskinpark Blazor\\MachinePark\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\Övning 16 - Industriell maskinpark Blazor\\MachinePark\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\Övning 16 - Industriell maskinpark Blazor\\MachinePark\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mohan\\OneDrive\\Desktop\\Exercises\\Övning 16 - Industriell maskinpark Blazor\\MachinePark\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MachinePark.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MachinePark.props",
+      "PackagePath": "build\\MachinePark.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MachinePark.props",
+      "PackagePath": "buildMultiTargeting\\MachinePark.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MachinePark.props",
+      "PackagePath": "buildTransitive\\MachinePark.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
